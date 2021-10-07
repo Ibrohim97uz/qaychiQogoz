@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  font-family: sans-serif;
+}
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+.game-title {
+  padding: 15px 0;
+}
+#restart-button {
+  margin: 5px 0;
+  padding: 5px 15px;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  transition: 0.5s;
+  display: none;
+}
+
+#restart-button:hover {
+  background-color: #2843da;
+  color: #fff;
+  cursor: pointer;
+}
+
+.scores {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 18px;
+  color: #fff;
+  margin: 20px 0;
+}
+.player-score-wrapper {
+  padding: 5px 0;
+  background-color: #2843da;
+}
+.computer-score-wrapper {
+  padding: 5px 0;
+  background-color: #2e2c2c;
+}
+.selections {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  font-size: 10vw;
+}
+.selections i {
+  transition: 0.5s;
+  cursor: pointer;
+}
+.selections i:hover {
+  color: #2843da;
+}
+.computer-select {
+  width: 100%;
+  height: 100%;
+  background-color: #00000050;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index: 1;
+}
+.computer-select-table-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.computer-select-table {
+  background-color: #fff;
+  padding: 50px 0;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  padding: 30px;
+  transition: 0.5s;
+}
+
+.computer-select-table i {
+  font-size: 10vw;
+  margin: 30px 0;
+}
+#computer-hand-name {
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  .scores {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

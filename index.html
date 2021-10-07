@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qaychi Qog'oz Bochka o'yini</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="game-title">Qaychi Qog'oz Bochka</h1>
+      <button onclick="reset()" id="restart-button">Qaytadan Boshlash</button>
+      <div class="scores">
+        <div class="player-score-wrapper">
+          O'yinchi: <span id="player-score">0</span>
+        </div>
+        <div class="computer-score-wrapper">
+          Kompyuter: <span id="computer-score">0</span>
+        </div>
+      </div>
+      <h2 class="selections-title">Tanlang:</h2>
+      <div class="selections">
+        <div class="">
+          <i onclick="userSelect('rock')" class="fas fa-hand-rock"></i>
+        </div>
+        <div class="">
+          <i onclick="userSelect('paper')" class="fas fa-hand-paper"></i>
+        </div>
+        <div class="">
+          <i onclick="userSelect('scissors')" class="fas fa-hand-scissors"></i>
+        </div>
+      </div>
+      <div class="computer-select"></div>
+      <div class="computer-select-table-wrapper">
+        <div class="computer-select-table">
+          <h1 id="result-game-title"></h1>
+          <span id="computer-hand"></span>
+          <p>Kompyuter tanladi: <span id="computer-hand-name"></span></p>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
